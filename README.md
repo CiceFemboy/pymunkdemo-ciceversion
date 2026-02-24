@@ -34,8 +34,4 @@ Lib\site-packages
 5. install requirements for the project's script 
 
 run python.exe
-run on python >> exec(open("change_dir.py").read()) <<
-
-import sys
-import subprocess
-subprocess.run([sys.executable, "-m", "pip", "install", "--user", "requirements.txt"])
+run on python >> exec(open("requirements_pip_installer.py").read()) <<
