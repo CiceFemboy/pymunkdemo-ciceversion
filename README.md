@@ -28,6 +28,7 @@ Now you should have pip installed on the embeded version of python
 Insert library path  after '#import site'inside the file to ensure packages are recognized by python
 
 Lib
+
 Lib\site-packages
 
 5. install requirements for the project's script 
