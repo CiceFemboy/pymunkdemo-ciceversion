@@ -14,7 +14,7 @@ run python.exe
 run on python >> exec(open("change_dir.py").read()) <<
 this commandis important as it it enables you to read scripts in the working directory instead of inside the embeded python directory.
 4. install pip
-run on python >> exec(open("change_dir.py").read()) <<
+run on python >> exec(open("get-pip.py").read()) <<
 there should be logs of the installation and new files inside the python folder. Pip is now installed
 the command window should close, if not close it
 
@@ -23,8 +23,19 @@ https://github.com/pypa/get-pip
 
 Now you should have pip installed on the embeded version of python
 
-4. install requirements for the project's script 
+4. 
+add packages path to filenamed 'python313._pth'
+insert after #import site
+>>
+Lib
+Lib\site-packages
+<<
+
+5. install requirements for the project's script 
 
 run python.exe
 run on python >> exec(open("change_dir.py").read()) <<
-pip install -r requirements.txt
+
+import sys
+import subprocess
+subprocess.run([sys.executable, "-m", "pip", "install", "--user", "requirements.txt"])
