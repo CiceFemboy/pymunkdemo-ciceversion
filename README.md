@@ -23,13 +23,12 @@ https://github.com/pypa/get-pip
 
 Now you should have pip installed on the embeded version of python
 
-4. 
-add packages path to filenamed 'python313._pth'
-insert after #import site
->>
+4. add packages path to the file named "python313._pth"
+
+Insert library path  after '#import site'inside the file to ensure packages are recognized by python
+
 Lib
 Lib\site-packages
-<<
 
 5. install requirements for the project's script 
 
